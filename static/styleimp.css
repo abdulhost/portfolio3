@@ -1,0 +1,151 @@
+body {
+    background-image: url("bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: beige;
+}
+.title h2{
+    color: aqua;
+}
+
+.social {
+    
+    display: flex;
+    justify-content: right;
+    padding: 0em;
+    margin-left: 100%;  
+    
+    flex-shrink: inherit;
+    gap: 0rem;
+
+    
+    
+}
+
+.social a {
+    
+    background-color: rgb(255, 255, 255);
+    padding: 0em;
+    margin: 5px;
+    /* margin-right: 20px; */
+    /* border: solid black; */
+    border-radius: 100px;
+    flex-basis: content;
+    /* padding-right: 10px;
+    padding-left: 0px; */
+    /* margin: 5px; */
+    text-decoration: none;
+}
+.icon-link>.bi {
+    flex-shrink: 0;
+    width: 0em;
+    height: 0em;
+    fill: currentcolor;
+    transition: .2s ease-in-out transform;
+}
+.icon-link{
+    gap: 0rem;
+}
+
+.social img {
+    width: 30px;
+    padding-left: 0%;
+    margin-left: 0%;
+}
+.icontemp{
+    border: 5px solid black;
+    border-radius: 100px;
+    
+}
+.icontemp a{
+    text-decoration: none;
+    color: ivory;
+   
+}
+.icontemp img{
+    width: 30px;
+}
+
+
+.container {
+    
+    display: flex;
+    flex-shrink: inherit;
+    width:400px;
+    margin: 0 auto;
+}
+
+
+h2 {
+    text-decoration-color: blue;
+    color: rgba(0, 0, 0, 0.93);
+    font-family: "arial";
+    font-size: 3em;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: animtext 4s steps(80, end);
+    transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    left: 20px;
+
+}
+
+.quote {
+    display: flex;
+    color: rgb(71, 255, 169);
+
+    text-align: center;
+    align-items: center;
+    margin: 5%;
+    margin-top: 1%;
+    padding: 5%;
+    padding-top: 0%;
+}
+
+.quote p {
+    margin-right: 10%;
+    background: #000;
+}
+
+.quote img {
+    /* filter: drop-shadow(0 0 20px #5a1515);
+   ;  */
+    /* filter: contrast(1); */
+    width: 22%;
+}
+.about{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+
+.footer{
+    font-size: 20px;
+    
+    text-align: center;
+    color: #000;
+    background: rgb(81, 237, 245);
+    margin: 0%;
+    margin-top: 5%;
+}
+
+
+@keyframes animtext {
+    from {
+        width: 0;
+        transition: all 2s ease-in-out;
+    }
+}
+
+#lbtn{
+    float: right;
+   
+}
+#lbtn a{
+     text-decoration: none;
+    color: #000;
+}

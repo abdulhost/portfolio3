@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleimp.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+ 
+  <div class="social">
+    <a class="icon-link" href="https://www.linkedin.com/in/abdul-wadood-5a5a9a24a/" target="_blank">
+      <svg class="bi" aria-hidden="true">
+        <use xlink:href="#box-seam"><img src="{{ url_for('static', filename='linkedin.png') }}" alt="error">
+        </use>
+      </svg>
+    </a>
+    <a class="icon-link" href="https://www.instagram.com/wadood.pathan.01/" target="_blank">
+      <svg class="bi" aria-hidden="true">
+        <use xlink:href="#box-seam"><img width="10%" src="{{ url_for('static', filename='inst.png') }}" alt="error">
+        </use>
+      </svg>
+    </a></div>
+    <!-- <div class="icontemp">
+    <a class="icon-link" href="https://www.youtube.com/" target="_blank">
+      <svg class="bi" aria-hidden="true">
+        <use xlink:href="#box-seam"><img width="10%" src="{{ url_for('static', filename='inst.png') }}" alt="error">
+        </use>
+      </svg>
+      
+    </a></div>
+   -->
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div id="flash-messages">
+            {% for message in messages %}
+                <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+  <div class="title">
+    <h2>Abdul Wadood Khan</h2>
+  </div>
+
+  <div class="quote">
+    <p>Through my portfolio, you'll witness the projects I've undertaken, from designing complex structures to
+      developing cutting-edge technologies. Each project represents my commitment to excellence, attention to detail,
+      and problem-solving skills.</p>
+    <img src="{{ url_for('static', filename='mine.jpg') }}" alt="Error">
+  </div>
+  <div class="about">
+    <p>
+      About <br>
+      <li>
+        Introducing myself as BCA student <br>
+        Purpose for developing this website was to show case my skills, still working on this... <br>
+
+      </li>
+      <li>
+        Education (still persuing): Jamia Hamdard - Bachelors of Computer Applications
+      </li>
+
+
+    </p>
+
+    <p>
+      <br> Projects Completed <br>
+      <li>
+        Live Website:- HTML CSS JS PHP- based website for a Hotel with MySql database, online bookings and Admin page
+        that display all booking data
+      </li>
+      <li>
+        Python Automation Tools:- Email sender(from excel sheet, bulk mail sender),whatsapp Automation, Web
+        Scrapper,Amazon scrapper,Clear Clutter.
+      </li>
+      <li>
+        Python Flask based:- Library Application, Portfolio.
+      </li>
+      <li>
+        Python Projects:- Interest based News,Notification sender(Greeting, water reminder), Message Encryption and
+        Decryption, merge pdfs, create bulk folders and files.
+      </li>
+      <li>
+        Bank Application:- C++ based Bank project
+      </li>
+      <li>
+        Certificates:- <br>
+        Spoken tutorial- Python -{Certificate link} <br>
+        Spoken tutorial- C -{Certificate link} <br>
+        Spoken tutorial- C++ -{Certificate link} <br>
+        Cisco- Intoduction to Cyber Security <br>
+        Adharshila Institute- {Certificatelink}
+        <br>NIELET O Level- {Certificatelink}
+      </li>
+
+    </p>
+    <p><br>
+      Technical Skills
+      <li>C </li>
+      <li>C++ </li>
+      <li>Python </li>
+      <li>Html </li>
+      <li>Css </li>
+      <li>Php </li>
+      <li>Mysql </li>
+
+    </p>
+  </div>
+
+
+
+
+  <div class="container">
+    <form method="POST" action="/" id="center">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input name="name" type="text" class="form-control">
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Offer/ Feedback</label>
+        <textarea  id="id=" name="msg" row="5" class="form-control"> </textarea>
+
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>
+      Thank You For Visiting...
+    </p>
+  </div>
+  <button type="button" class="btn btn-outline-dark" id="lbtn"> <a href="/login" target="_blank">Link</a> </button>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script>setTimeout(function () {
+    var flashMessages = document.getElementById('flash-messages');
+    if (flashMessages) {
+        flashMessages.style.display = 'none';
+        window.location.href = '/';
+    }
+}, 5000);</script>
+

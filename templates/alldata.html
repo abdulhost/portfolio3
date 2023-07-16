@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Page</title>
+</head>
+<style>
+    form {
+        text-align: center;
+        display: block;
+        width: 303px;
+        border-radius: 18px;
+        margin: 9px auto;
+        border: 2px solid rgb(14, 7, 5);
+        padding: 10px;
+        font-size: 17px;
+
+
+    }
+
+    form input {
+        display: flexbox;
+        align-items: center;
+        color: blue;
+        margin: 1%;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        font-size: 15px;
+
+    }
+
+    #b {
+        padding: auto;
+        width: fit-content;
+    }
+
+    form h4 {
+        font-size: 30px;
+        color: rgb(88, 171, 79);
+        margin: auto;
+    }
+</style>
+
+<body>
+    <form action="/login" method="post">
+        <div>
+            <h4>Admin Login</h4>
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="pass" placeholder="Enter password">
+
+            <input id="b" type="reset" name="" placeholder="" value="Clear">
+            <input id="b" type="submit" value="Login">
+        </div>
+    </form>
+    <table border="2">
+        {% for data in alldata %}
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.msg}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
